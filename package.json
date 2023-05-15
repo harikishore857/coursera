@@ -1,0 +1,18 @@
+{
+  "name": "coursera",
+  "version": "1.0.0",
+  "description": "E2E tests on Coursera web app",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run --headless --browser chrome --env allure=true",
+    "clean:folders": "rm -R -f allure-report/ && rm -R -f allure-results/",
+    "allure:report": "npm run allure generate allure-results — clean -o allure-report && allure open allure-report"
+  },
+  "author": "Hari Kishore",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.11.0",
+    "@faker-js/faker": "^7.6.0",
+    "@shelex/cypress-allure-plugin": "^2.38.3"
+  }
+}
